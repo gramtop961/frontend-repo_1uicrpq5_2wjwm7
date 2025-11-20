@@ -32,10 +32,10 @@ const features = [
 export default function Features() {
   return (
     <section id="features" className="relative py-20">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(59,130,246,0.12),transparent_60%)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,0.18),transparent_60%)]" />
       <div className="mx-auto max-w-7xl px-6">
         <motion.h2
-          className="text-3xl md:text-4xl font-bold text-white tracking-tight text-center"
+          className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight text-center"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -47,18 +47,18 @@ export default function Features() {
           {features.map((f, i) => (
             <motion.div
               key={f.title}
-              className="group relative overflow-hidden rounded-2xl border border-blue-400/20 bg-slate-900/60 p-6 ring-1 ring-inset ring-white/5 hover:border-blue-400/40"
+              className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 ring-1 ring-inset ring-slate-100 hover:shadow-xl hover:border-sky-300/60 transition-shadow"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
             >
-              <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-blue-500/10 blur-2xl transition-transform group-hover:scale-150" />
-              <div className="h-12 w-12 rounded-xl bg-blue-500/10 ring-1 ring-blue-400/30 grid place-items-center">
-                <f.icon className="h-6 w-6 text-blue-300" />
+              <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-sky-200/40 blur-2xl transition-transform group-hover:scale-150" />
+              <div className="h-12 w-12 rounded-xl bg-sky-100 ring-1 ring-sky-200 grid place-items-center">
+                <f.icon className="h-6 w-6 text-sky-600" />
               </div>
-              <h3 className="mt-4 text-white font-semibold">{f.title}</h3>
-              <p className="mt-2 text-blue-100/80 text-sm">{f.desc}</p>
+              <h3 className="mt-4 text-slate-900 font-semibold">{f.title}</h3>
+              <p className="mt-2 text-slate-600 text-sm">{f.desc}</p>
             </motion.div>
           ))}
         </div>

@@ -11,10 +11,10 @@ export default function Insights() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
               Turn activity into insights, insights into outcomes
             </h2>
-            <p className="mt-4 text-blue-100/80">
+            <p className="mt-4 text-slate-600">
               Automatically capture sourcing, outreach, interviews, and offers to produce clean, trustworthy metrics your leaders will actually use.
             </p>
 
@@ -23,14 +23,14 @@ export default function Insights() {
                 .map((stat, i) => (
                   <motion.div
                     key={stat}
-                    className="rounded-2xl border border-blue-400/20 bg-slate-900/60 p-5 ring-1 ring-inset ring-white/5"
+                    className="rounded-2xl border border-slate-200 bg-white p-5 ring-1 ring-inset ring-slate-100 shadow-sm"
                     initial={{ opacity: 0, y: 12 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.05 }}
                   >
-                    <p className="text-lg font-semibold text-white">{stat}</p>
-                    <p className="text-xs text-blue-200/70">after 60 days on Talent Tracker</p>
+                    <p className="text-lg font-semibold text-slate-900">{stat}</p>
+                    <p className="text-xs text-slate-500">after 60 days on Talent Tracker</p>
                   </motion.div>
                 ))}
             </div>
@@ -43,19 +43,19 @@ export default function Insights() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="relative rounded-2xl border border-blue-400/20 bg-slate-900/60 p-4 shadow-2xl">
-              <div className="rounded-xl bg-slate-800/60 ring-1 ring-blue-400/20 p-4">
-                <div className="h-40 rounded-xl bg-gradient-to-r from-blue-500/30 to-indigo-500/30" />
+            <div className="relative rounded-2xl border border-slate-200 bg-white p-4 shadow-2xl">
+              <div className="rounded-xl bg-slate-50 ring-1 ring-slate-200 p-4">
+                <div className="h-40 rounded-xl bg-gradient-to-r from-sky-200 to-indigo-200" />
                 <div className="mt-4 grid grid-cols-3 gap-4">
                   {[...Array(3)].map((_, i) => (
-                    <div key={i} className="rounded-lg bg-slate-800/70 p-4 ring-1 ring-blue-400/10">
-                      <div className="h-24 rounded-md bg-gradient-to-br from-blue-500/20 to-indigo-500/20" />
+                    <div key={i} className="rounded-lg bg-white p-4 ring-1 ring-slate-200">
+                      <div className="h-24 rounded-md bg-gradient-to-br from-sky-200/70 to-indigo-200/70" />
                     </div>
                   ))}
                 </div>
               </div>
               <motion.div
-                className="absolute -left-6 -top-6 h-20 w-20 rounded-full bg-blue-500/20 ring-1 ring-blue-400/40 backdrop-blur"
+                className="absolute -left-6 -top-6 h-20 w-20 rounded-full bg-sky-200 ring-1 ring-sky-300 backdrop-blur"
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ repeat: Infinity, duration: 5 }}
               />
